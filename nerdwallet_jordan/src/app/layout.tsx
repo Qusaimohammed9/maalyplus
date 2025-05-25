@@ -5,7 +5,7 @@ import Providers from '@/components/providers/providers'
 import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 
-const inter = Inter({ subsets: ['latin', 'arabic'] })
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'مالي بلس | MaalyPlus - منصة المقارنة المالية الرائدة في العالم العربي',
