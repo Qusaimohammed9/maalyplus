@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Facebook blue color scheme */
+    --primary: 214 89% 52%; /* Facebook blue #1877F2 */
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 214 89% 52%;
+ 
+    --accent: 214 32% 91%;
+    --accent-foreground: 214 89% 52%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 214 89% 52%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --primary: 214 89% 52%; /* Facebook blue #1877F2 */
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+  /* Text alignment */
+  .text-left {
+    text-align: right;
+  }
+  
+  .text-right {
+    text-align: left;
+  }
+  
+  /* Flex direction */
+  .flex-row {
+    flex-direction: row-reverse;
+  }
+  
+  /* Margins and paddings */
+  .mr-1, .mr-2, .mr-3, .mr-4, .mr-5, .mr-6, .mr-8, .mr-10, .mr-12 {
+    margin-right: 0;
+    margin-left: 0.25rem;
+  }
+  
+  .ml-1, .ml-2, .ml-3, .ml-4, .ml-5, .ml-6, .ml-8, .ml-10, .ml-12 {
+    margin-left: 0;
+    margin-right: 0.25rem;
+  }
+  
+  .pr-1, .pr-2, .pr-3, .pr-4, .pr-5, .pr-6, .pr-8, .pr-10, .pr-12 {
+    padding-right: 0;
+    padding-left: 0.25rem;
+  }
+  
+  .pl-1, .pl-2, .pl-3, .pl-4, .pl-5, .pl-6, .pl-8, .pl-10, .pl-12 {
+    padding-left: 0;
+    padding-right: 0.25rem;
+  }
+  
+  /* Border radius for RTL */
+  .rounded-l-md {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+  }
+  
+  .rounded-r-md {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+  }
+  
+  /* Transforms for RTL */
+  .rotate-180 {
+    transform: rotate(0deg);
+  }
+  
+  .rotate-0 {
+    transform: rotate(180deg);
+  }
+  
+  /* Space between for RTL */
+  .space-x-1, .space-x-2, .space-x-3, .space-x-4, .space-x-5, .space-x-6, .space-x-8 {
+    --tw-space-x-reverse: 1;
+  }
+  
+  /* RTL specific utility classes */
+  .rtl-space-x-reverse {
+    --tw-space-x-reverse: 1;
+  }
+  
+  .rtl-mirror {
+    transform: scaleX(-1);
+  }
+}
+
+/* RTL body class for custom styling */
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl .rtl-flip-icon svg {
+  transform: scaleX(-1);
+}
+
+body.rtl .rtl-reverse-flex {
+  flex-direction: row-reverse;
+}
+
+body.rtl .rtl-text-right {
+  text-align: right;
+}
+
+body.rtl .rtl-text-left {
+  text-align: left;
+}
+
+body.rtl .rtl-mr {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+body.rtl .rtl-ml {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
