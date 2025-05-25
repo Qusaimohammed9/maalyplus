@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { CountryProvider } from '@/components/providers/country-provider'
-import { RtlProvider } from '@/components/providers/rtl-provider'
+import CountryProvider from '@/components/providers/country-provider'
+import RtlProvider from '@/components/providers/rtl-provider'
 import { LanguageProvider } from '@/lib/language-context'
 
 export default function Providers({ children }) {
